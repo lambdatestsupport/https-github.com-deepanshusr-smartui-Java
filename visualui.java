@@ -33,8 +33,8 @@ public class visualui {
 
 
 
-        String username = "deepanshulambdatest";
-        String access_key = "f8xr8eV7hpJJixO6sbVmPazAH4C8VoAUhEANPjikayLTXNlJKs";
+        String username = "LT_username";
+        String access_key = "LT_accesskey";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("build", "VisualUI");
         capabilities.setCapability("name", "Visual Ui Testing");
