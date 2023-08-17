@@ -76,7 +76,7 @@ Make sure you have your LambdaTest credentials with you to run test automation s
 
 ## Run Your First Test
 
->**Test Scenario**: The sample [TestNGTodo1.java](https://github.com/LambdaTest/smartui-Java/visualui.java) tests a sample website and takes the screenshot of the website in a particular build.
+>**Test Scenario**: The sample [smartui-java.java](https://github.com/LambdaTest/smartui-Java/visualui.java) tests a sample website and takes the screenshot of the website in a particular build.
 
 
 ### Configuring Your Test Capabilities
