@@ -90,6 +90,8 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platform", "win10"); // If this cap isn't specified, it will just get the any available one
         capabilities.setCapability("build", "LambdaTestSampleApp");
         capabilities.setCapability("name", "LambdaTestJavaSample");
+        capabilities.setCapability("smartUI.project","your_project_name");
+        capabilities.setCapability("smartUI.build","your_build_name");
 ```
 
 You can generate capabilities for your test requirements with the help of our inbuilt [Desired Capability Generator](https://www.lambdatest.com/capabilities-generator/?utm_source=github&utm_medium=repo&utm_campaign=smartui-Java).
