@@ -43,11 +43,11 @@ Before you can start performing Java automation testing with Selenium, you would
 
 ### Cloning Repo And Installing Dependencies
 
-**Step 1:** Clone the LambdaTest’s Java-TestNG-Selenium repository and navigate to the code directory as shown below:
+**Step 1:** Clone the LambdaTest’s smartui-Java repository and navigate to the code directory as shown below:
 
 ```bash
-git clone https://github.com/LambdaTest/Java-TestNG-Selenium
-cd Java-TestNG-Selenium
+git clone https://github.com/LambdaTest/smartui-Java
+cd smartui-Java
 ```
 
 You can also run the command below to check for outdated dependencies.
@@ -58,7 +58,7 @@ mvn versions:display-dependency-updates
 
 ### Setting Up Your Authentication
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts. You can get these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build?utm_source=github&utm_medium=repo&utm_campaign=Java-TestNG-Selenium) or by your [LambdaTest Profile](https://accounts.lambdatest.com/login?utm_source=github&utm_medium=repo&utm_campaign=Java-TestNG-Selenium).
+Make sure you have your LambdaTest credentials with you to run test automation scripts. You can get these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build?utm_source=github&utm_medium=repo&utm_campaign=smartui-Java) or by your [LambdaTest Profile](https://accounts.lambdatest.com/login?utm_source=github&utm_medium=repo&utm_campaign=smartui-Java).
 
 **Step 2:** Set LambdaTest **Username** and **Access Key** in environment variables.
 
@@ -76,7 +76,7 @@ Make sure you have your LambdaTest credentials with you to run test automation s
 
 ## Run Your First Test
 
->**Test Scenario**: The sample [TestNGTodo1.java](https://github.com/LambdaTest/Java-TestNG-Selenium/blob/master/src/test/java/com/lambdatest/TestNGTodo1.java) tests a sample to-do list app by marking couple items as done, adding a new item to the list and finally displaying the count of pending items as output.
+>**Test Scenario**: The sample [TestNGTodo1.java](https://github.com/LambdaTest/smartui-Java/visualui.java) tests a sample website and takes the screenshot of the website in a particular build.
 
 
 ### Configuring Your Test Capabilities
@@ -86,13 +86,13 @@ Make sure you have your LambdaTest credentials with you to run test automation s
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", "chrome");
-        capabilities.setCapability("version", "70.0");
+        capabilities.setCapability("version", "110.0");
         capabilities.setCapability("platform", "win10"); // If this cap isn't specified, it will just get the any available one
         capabilities.setCapability("build", "LambdaTestSampleApp");
         capabilities.setCapability("name", "LambdaTestJavaSample");
 ```
 
-You can generate capabilities for your test requirements with the help of our inbuilt [Desired Capability Generator](https://www.lambdatest.com/capabilities-generator/?utm_source=github&utm_medium=repo&utm_campaign=Java-TestNG-Selenium).
+You can generate capabilities for your test requirements with the help of our inbuilt [Desired Capability Generator](https://www.lambdatest.com/capabilities-generator/?utm_source=github&utm_medium=repo&utm_campaign=smartui-Java).
 
 ### Executing The Test
 
@@ -116,30 +116,21 @@ Here is an example `xml` file which would help you to run a single test on vario
 
   <test name="WIN8TEST">
   <parameter name="browser" value="firefox"/>
-  <parameter name="version" value="62.0"/>
-  <parameter name="platform" value="WIN8"/>
+  <parameter name="version" value="112.0"/>
+  <parameter name="platform" value="WIN10"/>
     <classes>
-      <class name="LambdaTest.TestNGToDo"/>
+      <class name="LambdaTest.visualui"/>
     </classes>
   </test> <!-- Test -->
 
   <test name="WIN10TEST">
   <parameter name="browser" value="chrome"/>
-  <parameter name="version" value="79.0"/>
+  <parameter name="version" value="114.0"/>
   <parameter name="platform" value="WIN10"/>
     <classes>
-      <class name="LambdaTest.TestNGToDo"/>
+      <class name="LambdaTest.viusalui2"/>
     </classes>
   </test> <!-- Test -->
-  <test name="MACTEST">
-  <parameter name="browser" value="safari"/>
-  <parameter name="version" value="11.0"/>
-  <parameter name="platform" value="macos 10.13"/>
-    <classes>
-      <class name="LambdaTest.TestNGToDo"/>
-    </classes>
-  </test> <!-- Test -->
-
 </suite>
 ```
 
@@ -160,7 +151,7 @@ To run parallel tests using **TestNG**, we would have to execute the below comma
 
 You can test your locally hosted or privately hosted projects with LambdaTest Selenium grid using LambdaTest Tunnel. All you would have to do is set up an SSH tunnel using tunnel and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are live.
 
-Refer our [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/?utm_source=github&utm_medium=repo&utm_campaign=Java-TestNG-Selenium) for more information.
+Refer our [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/?utm_source=github&utm_medium=repo&utm_campaign=smartui-java) for more information.
 
 Here’s how you can establish LambdaTest Tunnel.
 
@@ -220,13 +211,13 @@ Check out our latest tutorials on TestNG automation testing 👇
       
 Visit the following links to learn more about LambdaTest's features, setup and tutorials around test automation, mobile app testing, responsive testing, and manual testing.
 
-* [LambdaTest Documentation](https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=Java-TestNG-Selenium)
-* [LambdaTest Blog](https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=Java-TestNG-Selenium)
-* [LambdaTest Learning Hub](https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=Java-TestNG-Selenium)    
+* [LambdaTest Documentation](https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=smartui-java)
+* [LambdaTest Blog](https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=smartui-java)
+* [LambdaTest Learning Hub](https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=smartui-java)    
 
 ## LambdaTest Community :busts_in_silhouette:
 
-The [LambdaTest Community](https://community.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=Java-TestNG-Selenium) allows people to interact with tech enthusiasts. Connect, ask questions, and learn from tech-savvy people. Discuss best practises in web development, testing, and DevOps with professionals from across the globe 🌎
+The [LambdaTest Community](https://community.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=smartui-java) allows people to interact with tech enthusiasts. Connect, ask questions, and learn from tech-savvy people. Discuss best practises in web development, testing, and DevOps with professionals from across the globe 🌎
 
 ## What's New At LambdaTest ❓
 
@@ -234,7 +225,7 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
       
 ## About LambdaTest
 
-[LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=Java-TestNG-Selenium) is a leading test execution and orchestration platform that is fast, reliable, scalable, and secure. It allows users to run both manual and automated testing of web and mobile apps across 3000+ different browsers, operating systems, and real device combinations. Using LambdaTest, businesses can ensure quicker developer feedback and hence achieve faster go to market. Over 500 enterprises and 1 Million + users across 130+ countries rely on LambdaTest for their testing needs.    
+[LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=smartui-java) is a leading test execution and orchestration platform that is fast, reliable, scalable, and secure. It allows users to run both manual and automated testing of web and mobile apps across 3000+ different browsers, operating systems, and real device combinations. Using LambdaTest, businesses can ensure quicker developer feedback and hence achieve faster go to market. Over 500 enterprises and 1 Million + users across 130+ countries rely on LambdaTest for their testing needs.    
 
 ### Features
 
