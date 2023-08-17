@@ -40,9 +40,9 @@ public class visualui {
         capabilities.setCapability("name", "Visual Ui Testing");
         capabilities.setCapability("browserName", "chrome");
         capabilities.setCapability("platformName", "Windows 11");
-        capabilities.setCapability("browserVersion", "105.0");
+        capabilities.setCapability("browserVersion", "114.0");
         capabilities.setCapability("visual",true);
-        capabilities.setCapability("smartUI.project","20th feb");
+        capabilities.setCapability("smartUI.project","your_project_name");
         //capabilities.setCapability("smartUI.build","10689a4");
         capabilities.setCapability("smartUI.options",sm);
         //multiple baseline images for your project
