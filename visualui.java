@@ -10,9 +10,12 @@ import java.util.HashMap;
 import java.util.Hashtable;
 
 public class visualui {
-    public static void main(String[] args) throws MalformedURLException, InterruptedException {
-        RemoteWebDriver driver = null;
-
+      RemoteWebDriver driver = null;
+      private String Status = "failed";
+    
+     @BeforeMethod
+    public void setup(Method m, ITestContext ctx) throws MalformedURLException, NoSuchAlgorithmException {
+       
 
         Hashtable<String, Integer> errorColor= new Hashtable<>();
         errorColor.put("red",255);
@@ -28,9 +31,6 @@ public class visualui {
         HashMap<String, Object> sm=new HashMap<String, Object>();
         sm.put("output",output);
         sm.put("scaleToSameSize",true);//scale to same size, when baseline image and comparision image is of different size, use true
-
-
-
 
 
         String username = "LT_username";
@@ -52,7 +52,8 @@ public class visualui {
         driver = new RemoteWebDriver(new URL("http://" + username + ":" + access_key + "@hub.lambdatest.com/wd/hub"), capabilities);
 
 
-
+ @Test
+    public void basicTest() throws InterruptedException {
 
         driver.get("https://www.lambdatest.com/");
         Thread.sleep(5000);
@@ -77,6 +78,17 @@ public class visualui {
         driver.quit();
 
 
+        Status = "passed";
+        Thread.sleep(800);
+        System.out.println("TestFinished");
 
+
+    }
+
+
+    @AfterMethod
+    public void tearDown() {
+        driver.executeScript("lambda-status=" + Status);
+        driver.quit();
     }
 }
