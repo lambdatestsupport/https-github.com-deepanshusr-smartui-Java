@@ -57,7 +57,7 @@ public class visualui {
         driver.get("https://www.lambdatest.com/");
         Thread.sleep(5000);
 
-        driver.executeScript("smartui.takeFullPageScreenshot=pic1");
+        driver.executeScript("smartui.takeFullPageScreenshot=pic1"); //takeFullPageScreenshot command will take the full page screenshot of the URL and supported only with selenium version 4.0 and above.
         Thread.sleep(1000);
 
        driver.get("https://www.lambdatest.com/pricing");
